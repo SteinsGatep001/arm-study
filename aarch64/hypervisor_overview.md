@@ -109,8 +109,6 @@ ARMv8-A虚拟化引入(VM)ID的概念，每个虚拟机分配一个VMID，存储
 .data
 hello_world:
     .ascii "Hello, world!\0"
-
-
 globalfunc entry2
     ADRP    x0, dummy_vectors
     MSR     VBAR_EL2, x0
@@ -125,5 +123,6 @@ endfunc entry2
 
 ## Reference
 
-[aarch64 hypervisor official doc](https://developer.arm.com/docs/100942/latest/hypervisor-software)
-[aarch64 helloworld](https://ashw.io/series/arm64-hypervisor-tutorial)
+- [aarch64 hypervisor official doc](https://developer.arm.com/docs/100942/latest/hypervisor-software)
+- [aarch64 helloworld](https://ashw.io/series/arm64-hypervisor-tutorial)
+- [arm64 hypervisor tutorial](https://github.com/ashwio/arm64-hypervisor-tutorial)

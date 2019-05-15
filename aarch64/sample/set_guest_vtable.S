@@ -12,8 +12,6 @@ LDR      X5, =0x80010203                       // Affinity: 0.1.2.3
 LDR      X6, =0x411FD073                       // MIDR: Cortex-A57
 BL       init_vm
 
-
-//
 // Init VM0
 //
 .global Image$$VM0_TT_S2$$ZI$$Base
@@ -37,4 +35,4 @@ ORR      X8, X8, #(0x7 << 3)                   // Set FMO/IMO/AMO => physical
 ORR      X8, X8, X1, LSL #31                   // RW: based on passed in args
 STR      X8, [X3]
 MSR      HCR_EL2, X8
-. . . 
+
